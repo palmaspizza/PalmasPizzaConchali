@@ -1127,8 +1127,8 @@ body {
   background-color: #ffffff;
 z-index: 9 !important;
 margin-top: 6px;
-margin-left: 67px;
-max-width: 30%;
+margin-left: 74px;
+max-width: 40%;
 border-top-right-radius: 8px;
 border-bottom-right-radius: 8px;
 font-size: 150% !important;
@@ -1137,7 +1137,22 @@ font-size: 170% !important;
 letter-spacing: 1px;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 border-left: 0px;
+padding: 20px;
 }
+
+
+#signopeso {
+  position: fixed;
+  background-color: #ffffff;
+z-index: 1672 !important;
+color: #ff6a00;
+font-size: 190% !important;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+border-left: 0px;
+margin-left: 144px;
+margin-top: 20px;
+}
+
 
 
 * {
