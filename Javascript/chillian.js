@@ -10,6 +10,7 @@ function cambiarcolorfamiliarchillian(){
   document.getElementById("medianachillian").style.color = "#ff7700"
   document.getElementById("medianachillian").style.fontSize = "150%"
   document.getElementById("input-chillian-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-chillian").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianachillian(){
   document.getElementById("familiarchillian").style.color = "#ff7700"
   document.getElementById("familiarchillian").style.fontSize = "150%"
   document.getElementById("input-chillian-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-chillian").hidden = false;
 }
 
 

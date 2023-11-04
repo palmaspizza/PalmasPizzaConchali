@@ -10,6 +10,7 @@ function cambiarcolorfamiliarvegetariana(){
   document.getElementById("medianavegetariana").style.color = "#ff7700"
   document.getElementById("medianavegetariana").style.fontSize = "150%"
   document.getElementById("input-vegetariana-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-vegetariana").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianavegetariana(){
   document.getElementById("familiarvegetariana").style.color = "#ff7700"
   document.getElementById("familiarvegetariana").style.fontSize = "150%"
   document.getElementById("input-vegetariana-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-vegetariana").hidden = false;
 }
 
 

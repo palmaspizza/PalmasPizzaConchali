@@ -151,7 +151,8 @@ ${instruccionescheeseburger}%0A
 
 ${pollobbqcantidad} ${pollobbqpizza} ${pollobbqtamaño} ${pollobbqmasa}
 ${instruccionespollobbq}%0A*
-
+============================
+Envía Este Mensaje ➡️
 🪙 *Total:* _$${total}_`
 
 if (nombre === "" || direccion === "" || formadepago === "" || telefono === "") {
@@ -167,6 +168,7 @@ return false;
 resp.classList.remove("fail");
 resp.classList.add("send");
 resp.innerHTML = ` Pedido de ${nombre} ENVIADO`;
+document.location.reload(); 
 
 window.open(url);
 });
@@ -179,3 +181,15 @@ window.open(url);
 
 
 
+direccion.addEventListener("keyup",e=>{
+  let string = e.target.value
+  e.target.value = string.split(" ").join("+");
+})
+
+
+telefono.addEventListener("keyup",e=>{
+  let string = e.target.value
+  e.target.value = string.split("+").join("");
+  e.target.value = string.split("56").join("");
+  e.target.value = string.split("569").join("9");
+})

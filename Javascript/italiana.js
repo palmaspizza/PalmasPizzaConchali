@@ -9,6 +9,7 @@ function cambiarcolorfamiliaritaliana(){
   document.getElementById("medianaitaliana").style.color = "#ff7700"
   document.getElementById("medianaitaliana").style.fontSize = "150%"
   document.getElementById("input-italiana-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-italiana").hidden = false;
   
 
 }
@@ -21,6 +22,7 @@ function cambiarcolormedianaitaliana(){
   document.getElementById("familiaritaliana").style.color = "#ff7700"
   document.getElementById("familiaritaliana").style.fontSize = "150%"
   document.getElementById("input-italiana-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-italiana").hidden = false;
 }
 
 

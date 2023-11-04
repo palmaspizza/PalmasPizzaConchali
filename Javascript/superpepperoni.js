@@ -10,6 +10,7 @@ function cambiarcolorfamiliarsuperpepperoni(){
   document.getElementById("medianasuperpepperoni").style.color = "#ff7700"
   document.getElementById("medianasuperpepperoni").style.fontSize = "150%"
   document.getElementById("input-superpepperoni-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-superpepperoni").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianasuperpepperoni(){
   document.getElementById("familiarsuperpepperoni").style.color = "#ff7700"
   document.getElementById("familiarsuperpepperoni").style.fontSize = "150%"
   document.getElementById("input-superpepperoni-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-superpepperoni").hidden = false;
 }
 
 

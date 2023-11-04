@@ -10,6 +10,7 @@ function cambiarcolorfamiliarnapolitana(){
   document.getElementById("mediananapolitana").style.color = "#ff7700"
   document.getElementById("mediananapolitana").style.fontSize = "150%"
   document.getElementById("input-napolitana-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-napolitana").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormediananapolitana(){
   document.getElementById("familiarnapolitana").style.color = "#ff7700"
   document.getElementById("familiarnapolitana").style.fontSize = "150%"
   document.getElementById("input-napolitana-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-napolitana").hidden = false;
 }
 
 

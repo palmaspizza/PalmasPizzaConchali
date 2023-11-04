@@ -507,6 +507,7 @@ function jamonD(){
       document.getElementById("borraryvolver-").style.color = "#b8b8b8"
       document.getElementById("borraryvolver-").style.border = "4px solid #b8b8b8"
       document.getElementById("span").style.color = "#b8b8b8"
+      document.getElementById("finalizarpedido-").hidden = false;
     
     
     

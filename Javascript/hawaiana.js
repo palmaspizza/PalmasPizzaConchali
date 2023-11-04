@@ -10,6 +10,7 @@ function cambiarcolorfamiliarhawaiana(){
   document.getElementById("medianahawaiana").style.color = "#ff7700"
   document.getElementById("medianahawaiana").style.fontSize = "150%"
   document.getElementById("input-hawaiana-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-hawaiana").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianahawaiana(){
   document.getElementById("familiarhawaiana").style.color = "#ff7700"
   document.getElementById("familiarhawaiana").style.fontSize = "150%"
   document.getElementById("input-hawaiana-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-hawaiana").hidden = false;
 }
 
 

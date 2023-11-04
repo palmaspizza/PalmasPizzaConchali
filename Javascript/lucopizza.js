@@ -10,6 +10,7 @@ function cambiarcolorfamiliarlucopizza(){
   document.getElementById("medianalucopizza").style.color = "#ff7700"
   document.getElementById("medianalucopizza").style.fontSize = "150%"
   document.getElementById("input-lucopizza-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-lucopizza").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianalucopizza(){
   document.getElementById("familiarlucopizza").style.color = "#ff7700"
   document.getElementById("familiarlucopizza").style.fontSize = "150%"
   document.getElementById("input-lucopizza-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-lucopizza").hidden = false;
 }
 
 

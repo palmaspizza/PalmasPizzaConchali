@@ -929,18 +929,18 @@ width: 35%
 
 @keyframes finalizarpedido {
   0%{
-    width: 95%;
-    font-size: 250% !important;
+    font-size: 30px !important;
+    border: #000000 solid 10px;
   }
 
   50%{
-    width: 85%;
-    font-size: 200% !important;
+    font-size: 25px !important;
+    border: #fff solid 20px;
   }
 
   100%{
-    width: 95%;
-    font-size: 250% !important;
+    font-size: 30px !important;
+    border: #000000 solid 10px;
   }
 }
 
@@ -1151,7 +1151,6 @@ margin-top: 20px;
     margin: 0;
     font-family: sans-serif;
     background-image: url(fondo.jpg);
-    background-size: 100vw 100vh;
     background-attachment: fixed;
   }
 
@@ -1363,10 +1362,9 @@ margin-top: 20px;
   padding: 0;
   border: none;
   color: black;
-z-index: 1 !important;
+z-index: 14 !important;
 background-color: transparent;
 position: relative; 
-background-color: transparent; 
 }
 
 .item {
@@ -1518,15 +1516,14 @@ letter-spacing: 0.2px;
   margin: 0;
   color: rgb(0, 0, 0) !important;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 140%;
+  font-size: 18px;
   margin-top: 1px !important;
-  width: 60%;
+  width: 60.9%;
   position: relative;
   margin: 0;
   margin-left: 125px;
   font-family: impact;
   letter-spacing: 0.2px;
-  
   }
 
   .nombre-arma-tu-pizza {

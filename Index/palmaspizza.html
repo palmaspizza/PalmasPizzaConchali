@@ -15,8 +15,46 @@
 
 <script>
 
+
+setTimeout(() => {
+  document.getElementById("signopeso").hidden =  true;
+        document.getElementById("signopeso").hidden = true;
+        document.getElementById("headernav").style = "height: 100%; background: #000000c3;"
+        document.getElementById("palmaspizzalogo").hidden = true;
+        document.getElementById("palmaspizzalogofoto").hidden = true;
+        document.getElementById("carrito").hidden = true;
+        document.getElementById("seguircomprando").hidden = true;
+      }, "5");
+
+ 
+
+
+
+
+
+
   let sound = new Audio('/Index/Sounds/agregar.mp3');
    
+
+
+  function zooms(){
+    document.getElementById("headernav").style = "height: 70px; background: #ff8900;"
+  document.getElementById("carrito").style = "margin-top: 0; border: 0px;"
+  document.getElementById("zooms").hidden = true;
+  document.getElementById("signopeso").hidden =  false;
+        document.getElementById("signopeso").hidden = false;
+        document.getElementById("palmaspizzalogofoto").hidden = false;
+        document.getElementById("carrito").hidden = false;
+        document.getElementById("palmaspizzalogo").hidden = false;
+
+  }
+
+function OK(){
+  document.getElementById("headernav").style = "height: 70px; background: #ff8900;"
+  document.getElementById("carrito").style = "margin-top: 0; border: 0px;"
+  document.getElementById("seguircomprando").hidden = true;
+}
+
    function sumartodo(){
 
   
@@ -141,7 +179,7 @@
 </script>
   
 
-    <div class="headernav" id="headernav">
+    <div class="headernav" style="display: center;" id="headernav">
       
           <audio hidden id="audio" controls>
             <source  type="audio/mp3" src="/Index/Sounds/agregar.mp3">
@@ -149,7 +187,7 @@
        <div id="carrito" style="border: 0px; margin-top: 0px;">
              
         <p id="signopeso">$</p>
-        <button id="palmaspizzalogo" style="margin-left: 15px !important; padding: 0; height: 70px; border: #ff8900; background-color: #ff8900; background: #ff8900;"><img src="/PalmasPizzaIMG/palmaspizzalogo.png" id="palmaspizzalogofoto" class="palmaspizzalogo">
+        <button id="palmaspizzalogo" style="margin-left: 15px !important; padding: 0; height: 70px; border: #ff8900; background-color: #ff8900; background: #ff8900;"><img src="/PalmasPizzaIMG/palmaspizzalogo.png" hrefO="https://api.whatsapp.com/send?phone=56952323555&text=%C2%A1Hola%20Palmas%20Pizza!%2C%20Me%20gustar%C3%ADa%20ordenar%3A%20___" id="palmaspizzalogofoto" class="palmaspizzalogo">
 
           <button class="buttxn" id="button-carrito" data-open="carrito-palmaspizza"> 
           <img class="carrofixedheader" src="/PalmasPizzaIMG/carrito-img.png"  id="carrito"  style="background-color: white; border-right: solid black 2px; width: 68px;">
@@ -160,16 +198,32 @@
       
     </button>  
         
-      <input class="carrofixedheader" type="number" id="total" style="cursor: none; margin-right: 50px !important;" value="324ty" readolny disabled disabled  data-open="carrito-palmaspizza">
+      <input class="carrofixedheader" type="text" value="0" id="total" style="cursor: none; margin-right: 50px !important;" value="324ty" readolny disabled  data-open="carrito-palmaspizza">
    
        </div>
+<div id="zooms">
+  <center>
+    <img src="/PalmasPizzaIMG/logopalmaspizzan.png" style="width: 35%; text-align: center; " alt="">
+   </center>
+   <h1 style="color: white; position: relative; text-align: center; text-decoration: underline;">Palmas Pizza</h1>
 
-<center id="seguircomprando" hidden>
-  <h1 style="color: white; background-color: #000000c7; width: auto;">Ingresa al Carrito para Finalizar Tu Pedido</h1>
-  <br><br><br><br><br>
-  <button class="button" style="font-size: 250%;" onclick="OK();">Seguir Comprando</button>
+<center>
+<button type="button" class="button-select" style="text-align: center; width: 70%; font-size: 200%;" onclick="zooms();" >Ok</button>
 </center>
 
+   <h1 style="color: #fff; z-index: 2; margin-top: 20%; display: center; text-align: center;">Puedes <span id="Acercar" style="color: #ff5500; text-decoration: underline;">Acercar</span> O <span id="Alejar" style="color: #0088ff; text-decoration: underline;">Alejar</span> la pantalla de esta manera</h1>
+
+   <center>
+    <img src="/PalmasPizzaIMG/zoom.png" alt="">
+   </center>
+
+
+</div>
+<center id="seguircomprando" hidden>
+  <h1 style="color: white; background-color: #000000c7; width: auto;"><span style="text-decoration: underline; color: #ff8c00;">Toca</span> el ⬆️Carrito para <span style="color: #6bde97; text-decoration:  underline;">Enviar</span> Tu Pedido</h1>
+  <br><br><br><br><br>
+  <button class="button-select"  style="font-size: 250%;" onclick="OK();">Seguir Comprando</button>
+  </center>
          </div>
 
 
@@ -184,10 +238,6 @@
 
 
 
-
-
-
-
     <!-- CARRITO PALMAS PIZZA -->
 
       <div class="btn-group"  >
@@ -196,20 +246,23 @@
             <head style="background: black !important;" >
               <br><br><br>
                
-
+                  
           
               </head>
-             
+             <footer>
+              <button type="button" class="button-select" data-close="" onclick="sumar();" >Cerrar Carrito</button>    
+              
+             </footer>
     
             <section class="modal-content">
-              <button type="button" class="buttons" id="finalizar-pedido-button" style=" z-index: 200000000 !important; padding: 29px;" data-open="finalizarpedido-html" hidden>Finalizar Pedido</button>
-              <br> <br>
+                <br> <br>
 
-                      <button type="button" class="button-select" data-close="" onclick="sumar();" >Cerrar Carrito</button>    
-                     
+                        
               <br><br>
   <h1 class="formulario__titulo">Pedido</h1>  <br>
-              <br><br><br><br>
+              <br><br>
+              <button type="button" class="buttons" id="finalizar-pedido-button" style=" z-index: 200000000 !important; padding: 29px;" data-open="finalizarpedido-html" hidden>Finalizar Pedido</button>
+              <br><br>
 
 
 <!-- INICIO INPUTS ITALIANA  -->
@@ -226,9 +279,9 @@
               <label for="italianamasa"></label> 
               <input  type="text" id="input-italiana-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
               <label for="italianatamaño"></label>
-               <input type="text" id="input-italiana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+               <input type="text" id="input-italiana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
               <label for="italianacantidad"></label>
-              <input type="text"  id="input-italiana-cantidad" class="numpizzas"   readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
+              <input type="text"  id="input-italiana-cantidad" class="numpizzas" readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
              
                
               <input type="text"  id="input-italiana-precio" readolny disabled style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
@@ -271,7 +324,7 @@
     <label for="napolitanamasa"></label>
     <input  type="text" id="input-napolitana-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
     <label for="napolitanatamaño"></label>
-    <input type="text" id="input-napolitana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+    <input type="text" id="input-napolitana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
     <label for="napolitanacantidad"></label>
     <input type="text"  id="input-napolitana-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
    
@@ -298,7 +351,7 @@
     <img src="/Pizzas/hawaiana.png" alt="" readolny disabled style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
     <input type="text"  id="input-hawaiana-pizza" readolny disabled style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
      <input  type="text" id="input-hawaiana-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
-    <input type="text" id="input-hawaiana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+    <input type="text" id="input-hawaiana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
     <input type="text"  id="input-hawaiana-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
    
      
@@ -325,7 +378,7 @@
                       <label for="superpepperonimasa"></label> 
                       <input  type="text" id="input-superpepperoni-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
                      <label for="superpepperonitamaño"></label>
-                       <input type="text" id="input-superpepperoni-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+                       <input type="text" id="input-superpepperoni-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
                       <label for="superpepperonicantidad"></label>
                       <input type="text"  id="input-superpepperoni-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
                      
@@ -353,7 +406,7 @@
          <label for="vegetarianamasa"></label>  
           <input  type="text" id="input-vegetariana-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
           <label for="vegetarianatamaño"></label>
-           <input type="text" id="input-vegetariana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+           <input type="text" id="input-vegetariana-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
           <label for="vegetarianacantidad"></label>
           <input type="text"  id="input-vegetariana-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
          
@@ -382,7 +435,7 @@
           <label for="lucopizzamasa"></label> 
           <input  type="text" id="input-lucopizza-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
           <label for="lucopizzatamaño"></label>
-           <input type="text" id="input-lucopizza-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+           <input type="text" id="input-lucopizza-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
          <label for="lucopizzacantidad"></label>
           <input type="text"  id="input-lucopizza-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
          
@@ -416,7 +469,7 @@
           <label for="pollobbqmasa"></label>  
           <input  type="text" id="input-pollobbq-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
           <label for="pollobbqtamaño"></label>
-           <input type="text" id="input-pollobbq-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+           <input type="text" id="input-pollobbq-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
           <label for="pollobbqcantidad"></label>
           <input type="text"  id="input-pollobbq-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
          
@@ -447,7 +500,7 @@
           <label for="chillianmasa"></label> 
           <input  type="text" id="input-chillian-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
           <label for="chilliantamaño"></label>
-           <input type="text" id="input-chillian-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+           <input type="text" id="input-chillian-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
           <label for="chilliancantidad"></label>
           <input type="text"  id="input-chillian-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
          
@@ -483,7 +536,7 @@
     <label for="cheeseburgermasa"></label> 
     <input  type="text" id="input-cheeseburger-masa" readolny disabled style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 240px; ">
     <label for="cheeseburgertamaño"></label>
-     <input type="text" id="input-cheeseburger-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+     <input type="text" id="input-cheeseburger-tamaño" readolny disabled style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
     <label for="cheeseburgercantidad"></label>
     <input type="text"  id="input-cheeseburger-cantidad" class="numpizzas"  readolny disabled style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">  <br>
    
@@ -544,14 +597,14 @@
           <div class="modal cantidad-button" style=" background-color: #fff; width: 102% !important;" id="finalizarpedido-html" data-animation="slideInOutLeft" >
             <div style="position: fixed; height: 100%; text-align: initial ; margin: auto; position: absolute;"class="modal-dialog" >
               <head style="background: black !important; height: 50px;" >
-                 <form action="" class="formulario" style="width: 100% !important;  margin: 0; margin-bottom: 0 !important; margin-top: 0px !important; padding: 0; max-width: 100%; max-height: 100%; height: 100% !important;" >
+                 <form action="" class="formulario" style="width: 100% !important;  margin: 0; margin-bottom: 0 !important; margin-top: 0px !important; padding: 0; max-width: 100%; height: 200% !important;" >
                      
-                     <form action="" class="formulario" style="min-width: 100% !important;">
+                     <form action="" class="formulario" style="min-width: 100% !important; height: 100%;">
                       <br><br><br>
                      
                   <head>
            
-                      <button type="button" id="volver-italiana" class="button-select" style="margin: auto; width: auto; height: auto !important; position: relative; width: 70%; display: grid;" data-close="">🢀 Volver </button>
+                      <button type="button" id="volver-italiana" class="button-select" style="margin: auto; width: auto; height: auto !important; position: relative; width: 70%; display: grid;" data-close="">🔙 Volver </button>
                      
                  
                   </head>
@@ -579,6 +632,7 @@
                             type="number"
                            class="formulario__input"
                            placeholder="Indica cuál es Teléfono"
+                           maxlength="9" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                          />
                      
                          <p style="position: absolute; z-index: inherit; margin-top: -46.5px; font-size: 150%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; user-select: none; margin-left: 5%;" aria-readolny disabled="true" aria-disabled="true">+56</p>
@@ -671,14 +725,14 @@
              
                   />   <br><br><br><br><br><br>
                   <label for="formadepago"></label>
-                  <input readolny disabled disabled style="font-family: 'Franklin Gothic Medium';"
+                  <input readolny disabled style="font-family: 'Franklin Gothic Medium';"
                   id="formadepago"
                   type="text"
              />      <div id="formadepagox" style="background-color: transparent; width: 90%; height: 30px; position: relative;"></div>
                          <div id="respuesta" z-index="43874987u487298437284 !important"></div>
       
 <center>
-  <p style="color: rgb(0, 255, 0); text-shadow: #5d5d5d 1px; -webkit-text-stroke: black 0.5px; ">⬇ Enviar a Whatsapp ⬇</p>
+  <p style="color: rgb(0, 255, 0); text-shadow: #5d5d5d 1px; -webkit-text-stroke: black 0.5px; font-size: 160%;">⬇ Enviar a Whatsapp ⬇</p>
   <img src="/PalmasPizzaIMG/submit.png" alt="palmaspizza" id="submit" style="width: 30%;">
                      
 </center>
@@ -768,7 +822,7 @@
         <br><br>
         
         <p class="nombre-arma-tu-pizza" style="margin-top: -134px;">ARMA TU PIZZA</p>
-        <p class="ing-arma-tu-pizza" >Crea tu propia <span style="color: #ff5500;">PIZZA</span> la Salsa e Ingredientes a <span style="color: #ff5500;">A TU GUSTO</span></p>
+        <p class="ing-arma-tu-pizza" >Crea tu propia <span style="color: #ff5500;">PIZZA</span> con la Salsa e Ingredientes <span style="color: #ff5500;">A TU GUSTO</span></p>
   
           
   
@@ -784,7 +838,7 @@
       <div style="height: 100%;" class="modal-dialog" >
      <footer>
       <br>
-      <button type="button" class="button-select" style="width: 90%; height: 70px !important; z-index: 233;" data-close="ventana-arma-tu-pizza" >🢀 Volver  </button> 
+      <button type="button" class="button-select" style="width: 90%; height: 70px !important; z-index: 233;" data-close="ventana-arma-tu-pizza" >🔙 Volver  </button> 
     <br><br><br> 
     </footer>
         <h1 class="formulario__titulo" style="font-size: 320%;">Arma tu Pizza</h1> <br>
@@ -947,7 +1001,7 @@
    <br><br>
         <br>  
         <button type="button" class="buttons" style=" width: 95%; height: 70px !important;" data-close="" data-open="selecciona-3-ingredientes" onclick="pizza();" href="#anchor-siguiente-arma-tu-pizza"><span style="margin-left: 5%;">Siguiente 🢂</span></button>
-        <input readolny disabled disabled
+        <input readolny disabled
         class="formulario__input"
  style="border-color: rgb(94, 94, 94) !important; height: 10px !important;"
       />
@@ -963,7 +1017,7 @@
           <footer>
             <br><br>
 
-                <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+                <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
                 <input readolny disabled
                 class="formulario__input"
           style="border-color: rgb(94, 94, 94) !important; padding-top: 5px !important;"
@@ -1010,7 +1064,7 @@
           <footer>
             <br><br>
 
-                <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+                <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
                 <input readolny disabled
                 class="formulario__input"
           style="border-color: rgb(94, 94, 94) !important; padding-top: 5px !important;"
@@ -1101,7 +1155,7 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br>
             <br><br><br><br>
-              <input readolny disabled disabled
+              <input readolny disabled
             class="formulario__input"
      style="border-color: rgb(255, 106, 0) !important; padding-top: 0px; margin-top: -50px;"
           />
@@ -1228,7 +1282,7 @@
        
         <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="italiana-html" onclick="italianapizza();" href="#anchor-agregar-italiana">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
         </footer>
         
     </div>
@@ -1405,17 +1459,7 @@
   
   
           
-          <input readolny disabled
-          class="formulario__input"
-   style="border-color: rgb(94, 94, 94) !important;"
-        />
   
-  
-        <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-        <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-        <button type="button" class="tamaño button-select" id="masatradicionalitaliana" onclick="cambiarcolormasatradicionalitaliana();">Tradicional</button>
-        <button type="button" class="tamaño button-select" id="masadelgadaitaliana" onclick="cambiarcolormasadelgadaitaliana();">Delgada</button>
-        
   
         
         <input readolny disabled
@@ -1440,7 +1484,7 @@
      <script>
       
      </script>
-            <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+            <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
         
                    </footer>
          
@@ -1621,7 +1665,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
      
       <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="hawaiana-html" onclick="hawaianapizza();" href="#anchor-agregar-hawaiana">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
     </footer>
       
   </div>
@@ -1799,18 +1843,6 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
 
-        
-        <input readolny disabled
-        class="formulario__input"
- style="border-color: rgb(94, 94, 94) !important;"
-      />
-
-
-      <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #5d5d5d;">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-      <button type="button" class="tamaño button-select" id="masatradicionalhawaiana" onclick="cambiarcolormasatradicionalhawaiana();">Tradicional</button>
-      <button type="button" class="tamaño button-select" id="masadelgadahawaiana" onclick="cambiarcolormasadelgadahawaiana();">Delgada</button>
-      
 
       
       <input readolny disabled
@@ -1831,7 +1863,7 @@ style="border-color: rgb(94, 94, 94) !important;"
         
         <br><br><a id="#anchor-agregar-hawaiana"></a>
         <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-hawaiana" data-close="" onclick="sumartodo();agregaralpedidohawaiana();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-        <button type="button" data-close="" id="volver-superpepperoni" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+        <button type="button" data-close="" id="volver-superpepperoni" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
 
 
             </form>
@@ -1938,7 +1970,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
      
       <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="napolitana-html" onclick="napolitanapizza();" href="#anchor-agregar-napolitana">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
     </footer>
       
   </div>
@@ -2116,19 +2148,6 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
 
-        
-        <input readolny disabled
-        class="formulario__input"
- style="border-color: rgb(94, 94, 94) !important;"
-      />
-
-
-      <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-      <button type="button" class="tamaño button-select" id="masatradicionalnapolitana" onclick="cambiarcolormasatradicionalnapolitana();">Tradicional</button>
-      <button type="button" class="tamaño button-select" id="masadelgadanapolitana" onclick="cambiarcolormasadelgadanapolitana();">Delgada</button>
-      
-
       
       <input readolny disabled
       class="formulario__input"
@@ -2148,7 +2167,7 @@ style="border-color: rgb(94, 94, 94) !important;"
         <a id="#anchor-agregar-napolitana"></a>
         <br><br>
         <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-napolitana" data-close="" onclick="sumartodo();agregaralpedidonapolitana();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
         
             
 
@@ -2223,7 +2242,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
      
       <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="superpepperoni-html" onclick="superpepperonipizza();" href="#anchor-agregar-superpepperoni">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
     </footer>
       
   </div>
@@ -2407,18 +2426,6 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
 
-        
-        <input readolny disabled
-        class="formulario__input"
- style="border-color: rgb(94, 94, 94) !important;"
-      />
-
-
-      <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-      <button type="button" class="tamaño button-select" id="masatradicionalsuperpepperoni" onclick="cambiarcolormasatradicionalsuperpepperoni();">Tradicional</button>
-      <button type="button" class="tamaño button-select" id="masadelgadasuperpepperoni" onclick="cambiarcolormasadelgadasuperpepperoni();">Delgada</button>
-      
 
       
       <input readolny disabled
@@ -2439,7 +2446,7 @@ style="border-color: rgb(94, 94, 94) !important;"
         
         <br><br><a id="#anchor-agregar-superpepperoni"></a>
         <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-superpepperoni" data-close="" onclick="sumartodo();agregaralpedidosuperpepperoni();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-        <button type="button" data-close="" id="volver-superpepperoni" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+        <button type="button" data-close="" id="volver-superpepperoni" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
 
             </form>
            <script src="/Javascript/superpepperoni.js"></script>
@@ -2504,7 +2511,7 @@ style="border-color: rgb(94, 94, 94) !important;"
        
         <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="vegetariana-html" onclick="vegetarianapizza();" href="#anchor-agregar-vegetariana">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
 
       </footer>
         
@@ -2680,22 +2687,7 @@ style="border-color: rgb(94, 94, 94) !important;"
   
   
   
-  
-  
-  
-          
-          <input readolny disabled
-          class="formulario__input"
-   style="border-color: rgb(94, 94, 94) !important;"
-        />
-  
-  
-        <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-        <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-        <button type="button" class="tamaño button-select" id="masatradicionalvegetariana" onclick="cambiarcolormasatradicionalvegetariana();">Tradicional</button>
-        <button type="button" class="tamaño button-select" id="masadelgadavegetariana" onclick="cambiarcolormasadelgadavegetariana();">Delgada</button>
-        
-  
+
         
         <input readolny disabled
         class="formulario__input"
@@ -2718,7 +2710,7 @@ style="border-color: rgb(94, 94, 94) !important;"
               <script>
               
               </script>
-              <button type="button" data-close="" id="volver-vegetariana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+              <button type="button" data-close="" id="volver-vegetariana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
               
                     </footer>
          
@@ -2786,7 +2778,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
      
       <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="lucopizza-html" onclick="lucopizzapizza();" href="#anchor-agregar-lucopizza">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
 
     </footer>
       
@@ -2962,18 +2954,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
 
-        
-        <input readolny disabled
-        class="formulario__input"
- style="border-color: rgb(94, 94, 94) !important;"
-      />
-
-
-      <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-      <button type="button" class="tamaño button-select" id="masatradicionallucopizza" onclick="cambiarcolormasatradicionallucopizza();">Tradicional</button>
-      <button type="button" class="tamaño button-select" id="masadelgadalucopizza" onclick="cambiarcolormasadelgadalucopizza();">Delgada</button>
-      
+   
 
       
       <input readolny disabled
@@ -2994,7 +2975,7 @@ style="border-color: rgb(94, 94, 94) !important;"
         
         <br><br><a id="#anchor-agregar-lucopizza"></a>
         <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-lucopizza" data-close="" onclick="sumartodo();agregaralpedidolucopizza();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
         
             
 
@@ -3058,7 +3039,7 @@ style="border-color: rgb(94, 94, 94) !important;"
        
         <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="cheeseburger-html" onclick="cheeseburgerpizza();" href="#anchor-agregar-cheeseburger">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
       </footer>
         
     </div>
@@ -3232,22 +3213,7 @@ style="border-color: rgb(94, 94, 94) !important;"
   
   
   
-  
-  
-  
-          
-          <input readolny disabled
-          class="formulario__input"
-   style="border-color: rgb(94, 94, 94) !important;"
-        />
-  
-  
-        <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-        <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-        <button type="button" class="tamaño button-select" id="masatradicionalcheeseburger" onclick="cambiarcolormasatradicionalcheeseburger();">Tradicional</button>
-        <button type="button" class="tamaño button-select" id="masadelgadacheeseburger" onclick="cambiarcolormasadelgadacheeseburger();">Delgada</button>
-        
-  
+
         
         <input readolny disabled
         class="formulario__input"
@@ -3267,7 +3233,7 @@ style="border-color: rgb(94, 94, 94) !important;"
           
           <br><br><a id="#anchor-agregar-cheeseburger"></a>
           <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-cheeseburger" data-close="" onclick="sumartodo();agregaralpedidocheeseburger();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-          <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+          <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
         
             
   
@@ -3332,7 +3298,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
      
       <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="pollobbq-html" onclick="pollobbqpizza();" href="#anchor-agregar-pollobbq">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
     </footer>
       
   </div>
@@ -3504,22 +3470,6 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
 
-
-
-
-        
-        <input readolny disabled
-        class="formulario__input"
- style="border-color: rgb(94, 94, 94) !important;"
-      />
-
-
-      <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-      <button type="button" class="tamaño button-select" id="masatradicionalpollobbq" onclick="cambiarcolormasatradicionalpollobbq();">Tradicional</button>
-      <button type="button" class="tamaño button-select" id="masadelgadapollobbq" onclick="cambiarcolormasadelgadapollobbq();">Delgada</button>
-      
-
       
       <input readolny disabled
       class="formulario__input"
@@ -3539,7 +3489,7 @@ style="border-color: rgb(94, 94, 94) !important;"
         
         <br><br><a id="#anchor-agregar-pollobbq"></a>
         <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-pollobbq" data-close="" onclick="sumartodo();agregaralpedidopollobbq();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
         
             
        
@@ -3603,7 +3553,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
      
       <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="chillian-html" onclick="chillianpizza();" href="#anchor-agregar-chillian">Pedir</button>
           <br><br>
-          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🢀 Volver </button>
+          <button type="button" class="button-select" style="width: 90%; height: 70px !important;" data-close="">🔙 Volver </button>
     </footer>
       
   </div>
@@ -3776,18 +3726,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
         
-        <input readolny disabled
-        class="formulario__input"
- style="border-color: rgb(94, 94, 94) !important;"
-      />
-
-
-      <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
-      <button type="button" class="tamaño button-select" id="masatradicionalchillian" onclick="cambiarcolormasatradicionalchillian();">Tradicional</button>
-      <button type="button" class="tamaño button-select" id="masadelgadachillian" onclick="cambiarcolormasadelgadachillian();">Delgada</button>
-      
-
+   
       
       <input readolny disabled
       class="formulario__input"
@@ -3808,7 +3747,7 @@ style="border-color: rgb(94, 94, 94) !important;"
         <br><br>
         <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-chillian" data-close="" onclick="sumartodo();agregaralpedidochillian();" hidden>Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
         
-        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🢀 Volver  Atrás</button>
+        <button type="button" data-close="" id="volver-italiana" class="button-select" style="width: 100%; height: 70px !important; z-index: 999; font-size: 160%;">🔙 Volver  Atrás</button>
         
             
             </form>

@@ -10,6 +10,7 @@ function cambiarcolorfamiliarcheeseburger(){
   document.getElementById("medianacheeseburger").style.color = "#ff7700"
   document.getElementById("medianacheeseburger").style.fontSize = "150%"
   document.getElementById("input-cheeseburger-tamaño").value = 'FAMILIARES';
+  document.getElementById("finalizarpedido-cheeseburger").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianacheeseburger(){
   document.getElementById("familiarcheeseburger").style.color = "#ff7700"
   document.getElementById("familiarcheeseburger").style.fontSize = "150%"
   document.getElementById("input-cheeseburger-tamaño").value = 'MEDIANAS';
+  document.getElementById("finalizarpedido-cheeseburger").hidden = false;
 }
 
 

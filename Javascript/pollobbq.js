@@ -10,6 +10,7 @@ function cambiarcolorfamiliarpollobbq(){
   document.getElementById("medianapollobbq").style.color = "#ff7700"
   document.getElementById("medianapollobbq").style.fontSize = "150%"
   document.getElementById("input-pollobbq-tamaño").value = 'FAMILIARES';
+   document.getElementById("finalizarpedido-pollobbq").hidden = false;
 
 }
 
@@ -21,6 +22,7 @@ function cambiarcolormedianapollobbq(){
   document.getElementById("familiarpollobbq").style.color = "#ff7700"
   document.getElementById("familiarpollobbq").style.fontSize = "150%"
   document.getElementById("input-pollobbq-tamaño").value = 'MEDIANAS';
+   document.getElementById("finalizarpedido-pollobbq").hidden = false;
 }
 
 

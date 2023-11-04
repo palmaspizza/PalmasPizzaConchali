@@ -38,10 +38,20 @@ function borrarformadepago() {
 
 function inputtransferencia() {
   document.getElementById("formadepago").value = "📱Transferencia📱";
+  document.getElementById("transferencia").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
+  document.getElementById("transferencia").style.color = "#fff"
+  document.getElementById("efectivo").style.background = "#fff"
+  document.getElementById("efectivo").style.color = "#ff7700"
+  document.getElementById("efectivo").style.fontSize = "150%"
 }
 
 function inputefectivo() {
   document.getElementById("formadepago").value = "💵Efectivo💵";
+  document.getElementById("efectivo").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
+  document.getElementById("efectivo").style.color = "#fff"
+  document.getElementById("transferencia").style.background = "#fff"
+  document.getElementById("transferencia").style.color = "#ff7700"
+  document.getElementById("transferencia").style.fontSize = "150%"
 }
 
 
