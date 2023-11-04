@@ -124,18 +124,7 @@
 
 
 
-body {
-    margin: 0;
-    padding: 0;
-}
 
-.headernav {
- width: 100%;
- height: 90px;
- background: #ff8900;
- position: fixed;
- z-index: 1;
-}
 
 .palmaspizzalogo {
  height: 55px;

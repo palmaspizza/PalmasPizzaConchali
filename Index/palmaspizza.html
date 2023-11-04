@@ -19,6 +19,99 @@
    
    function sumartodo(){
 
+  
+        document.getElementById("total").style.background = "#fff"
+        document.getElementById("total").style.color = "#ff7700"
+        
+        document.getElementById("signopeso").style.background = "#fff"
+        document.getElementById("signopeso").style.color = "#ff7700"
+        document.getElementById("headernav").style = "height: 100%; background: #000000c3;"
+        document.getElementById("palmaspizzalogo").style = "background: transparent; border: 0px;"
+        document.getElementById("palmaspizzalogofoto").style = "background: transparent; border: 0px;"
+        document.getElementById("carrito").style = "margin-top: 50%; border: 0px;"
+        document.getElementById("seguircomprando").hidden = false;
+
+      setTimeout(() => {
+        document.getElementById("total").style.color = "black"
+        document.getElementById("total").style.background = "#ff7700"
+        document.getElementById("signopeso").style.color = "black"
+        document.getElementById("signopeso").style.background = "#ff7700"
+      }, "2500");
+
+      setTimeout(() => {
+        document.getElementById("total").style.background = "#fff"
+        document.getElementById("total").style.color = "#ff7700"
+        
+        document.getElementById("signopeso").style.background = "#fff"
+        document.getElementById("signopeso").style.color = "#ff7700"
+        
+
+      }, "3000");
+      
+      setTimeout(() => {
+        document.getElementById("total").style.color = "black"
+        document.getElementById("total").style.background = "#ff7700"
+        
+        document.getElementById("signopeso").style.color = "black"
+        document.getElementById("signopeso").style.background = "#ff7700"
+        
+
+      }, "3500");
+
+      setTimeout(() => {
+        document.getElementById("total").style.background = "#fff"
+        document.getElementById("total").style.color = "#ff7700"
+        
+        document.getElementById("signopeso").style.background = "#fff"
+        document.getElementById("signopeso").style.color = "#ff7700"
+        
+
+      }, "4000");
+
+      setTimeout(() => {
+        document.getElementById("total").style.color = "black"
+        document.getElementById("total").style.background = "#ff7700"
+        
+        document.getElementById("signopeso").style.color = "black"
+        document.getElementById("signopeso").style.background = "#ff7700"
+        
+
+      }, "4500");
+
+      setTimeout(() => {
+        document.getElementById("total").style.background = "#fff"
+        document.getElementById("total").style.color = "#ff7700"
+        
+        document.getElementById("signopeso").style.background = "#fff"
+        document.getElementById("signopeso").style.color = "#ff7700"
+        
+
+      }, "5000");
+
+
+      setTimeout(() => {
+        document.getElementById("total").style.color = "black"
+        document.getElementById("total").style.background = "#ff7700"
+        
+        document.getElementById("signopeso").style.color = "black"
+        document.getElementById("signopeso").style.background = "#ff7700"
+        
+
+      }, "5500");
+
+      setTimeout(() => {
+        document.getElementById("total").style.background = "#fff"
+        document.getElementById("total").style.color = "#ff7700"
+        
+        document.getElementById("signopeso").style.background = "#fff"
+        document.getElementById("signopeso").style.color = "#ff7700"
+        
+
+      }, "6000");
+
+
+
+
     sound.play();
 
     try {
@@ -39,32 +132,43 @@
   }
 
 
+      
+    
+
 
 
 
 </script>
   
 
-    <div class="headernav">
+    <div class="headernav" id="headernav">
+      
           <audio hidden id="audio" controls>
             <source  type="audio/mp3" src="/Index/Sounds/agregar.mp3">
             </audio>
-            <p id="signopeso">$</p>
-          <button style="margin-left: 15px !important; padding: 0; height: 70px; border: #ff8900; background-color: #ff8900; background: #ff8900;"><img src="/PalmasPizzaIMG/palmaspizzalogo.png"  class="palmaspizzalogo">
-  
-            <button class="buttxn" id="button-carrito" data-open="carrito-palmaspizza"> 
-            <img class="carrofixedheader" src="/PalmasPizzaIMG/carrito-img.png"  id="carrito"  style="background-color: white; border-right: solid black 2px; width: 68px;">
+       <div id="carrito" style="border: 0px; margin-top: 0px;">
+             
+        <p id="signopeso">$</p>
+        <button id="palmaspizzalogo" style="margin-left: 15px !important; padding: 0; height: 70px; border: #ff8900; background-color: #ff8900; background: #ff8900;"><img src="/PalmasPizzaIMG/palmaspizzalogo.png" id="palmaspizzalogofoto" class="palmaspizzalogo">
 
-            
-            
-        </button>
-        
-      </button>  
+          <button class="buttxn" id="button-carrito" data-open="carrito-palmaspizza"> 
+          <img class="carrofixedheader" src="/PalmasPizzaIMG/carrito-img.png"  id="carrito"  style="background-color: white; border-right: solid black 2px; width: 68px;">
+
           
-        <input class="carrofixedheader" type="number" id="total" style="cursor: none; margin-right: 50px !important;" value="324ty" readolny disabled disabled  data-open="carrito-palmaspizza">
-     
+          
+      </button>
+      
+    </button>  
+        
+      <input class="carrofixedheader" type="number" id="total" style="cursor: none; margin-right: 50px !important;" value="324ty" readolny disabled disabled  data-open="carrito-palmaspizza">
+   
+       </div>
 
-
+<center id="seguircomprando" hidden>
+  <h1 style="color: white; background-color: #000000c7; width: auto;">Ingresa al Carrito para Finalizar Tu Pedido</h1>
+  <br><br><br><br><br>
+  <button class="button" style="font-size: 250%;" onclick="OK();">Seguir Comprando</button>
+</center>
 
          </div>
 
